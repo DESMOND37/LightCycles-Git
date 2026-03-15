@@ -12,7 +12,10 @@
  *  Player 1 (CYAN) : W A S D
  *  Player 2 (GOLD) : Arrow keys
  *  Pause: P   Quit: Q
- * 
+ *
+ *  © Not Yet Copyright.
+ *  DSMND Software. All Rights Not Reserved.
+ *  All Rights Not Reserved Yet.
  */
 
  // ─── Platform headers ─────────────────────────────────────────────────────────
@@ -254,13 +257,16 @@ static void showSplash(WINDOW* w) {
     drawBorder(w);
     centerMsg(w, 3, " T R O N  :  L I G H T  C Y C L E S ", CP_TITLE, true);
     centerMsg(w, 5, "Two programs enter. One program leaves.", CP_INFO, false);
-    centerMsg(w, 8, "Player 1  (CYAN)  :  W  A  S  D", CP_P1, true);
-    centerMsg(w, 9, "Player 2  (GOLD)  :  Arrow Keys", CP_P2, true);
-    centerMsg(w, 11, "Ride your light cycle across the Grid.", CP_INFO, false);
-    centerMsg(w, 12, "Force your opponent into a wall or trail.", CP_INFO, false);
-    centerMsg(w, 14, "First to 5 round wins takes the match.", CP_INFO, false);
-    centerMsg(w, 17, "P - pause                Q - quit", CP_INFO, false);
-    centerMsg(w, 19, ">>> Press SPACE to enter the Grid <<<", CP_WIN, true);
+    centerMsg(w, 7, "Player 1  (CYAN)  :  W  A  S  D", CP_P1, true);
+    centerMsg(w, 8, "Player 2  (GOLD)  :  Arrow Keys", CP_P2, true);
+    centerMsg(w, 10, "Ride your light cycle across the Grid.", CP_INFO, false);
+    centerMsg(w, 11, "Force your opponent into a wall or trail.", CP_INFO, false);
+    centerMsg(w, 13, "First to 5 round wins takes the match.", CP_INFO, false);
+    centerMsg(w, 15, "P - pause                Q - quit", CP_INFO, false);
+    centerMsg(w, 17, ">>> Press SPACE to enter the Grid <<<", CP_WIN, true);
+
+    centerMsg(w, ARENA_H - 2, "© Not Yet Copyright. DSMND Software.", CP_INFO, false);
+    centerMsg(w, ARENA_H - 1, "All Rights Not Reserved Yet.", CP_INFO, false);
     wrefresh(w);
 
     nodelay(w, FALSE);
