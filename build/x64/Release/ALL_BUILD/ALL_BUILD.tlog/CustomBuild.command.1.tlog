@@ -1,6 +1,6 @@
-^F:\MARAT\GAMEDEV\DSMND37_CODEBASED_GAMEPROJECTS\LIGHTCYCLES\CMAKELISTS.TXT
+^F:\MARAT\GAMEDEV\DSMND37_CODEBASED_GAMEPROJECTS\LIGHTCYCLES-GIT\CMAKELISTS.TXT
 setlocal
-"F:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles -BF:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles/build --check-stamp-file F:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles/build/CMakeFiles/generate.stamp
+"F:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles-Git -BF:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles-Git/build --check-stamp-file F:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles-Git/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
