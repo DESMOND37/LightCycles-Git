@@ -41,21 +41,15 @@ C:\vcpkg\vcpkg install pdcurses:x64-windows
 
 ### 3. Сгенерировать проект CMake
 
-P.S. В случае возникновения ошибок удалить папку build в корневой дериктории проекта:
+```cmd
+cd <папка с исходниками> # Предполагается, что вы там уже будете.
+
+cmake -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_MANIFEST_MODE=OFF
+```
+P.S. В случае возникновения ошибок удалить папку build в корневой дериктории проекта, и сгенерировать проект CMake заново:
 
 ```cmd
 rmdir /S /Q build
-```
-
-# ```cmd
-# cd <папка с исходниками>
-# 
-# cmake -B build -G "Visual Studio 17 2022" -A x64 ^
-#   -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
-# ```
-
-```cmd
-cmake -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_MANIFEST_MODE=OFF
 ```
 
 ### 4. Собрать
