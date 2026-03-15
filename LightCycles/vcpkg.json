@@ -1,0 +1,7 @@
+{
+  "name": "tron-light-cycles",
+  "version": "1.0.0",
+  "dependencies": [
+    "pdcurses"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\Marat\GameDev\DSMND37_CodeBased_GameProjects\LightCycles\LightCycles\LightCycles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\Marat\GameDev\DSMND37_CodeBased_GameProjects\LightCycles\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FF18E398-38E8-30E3-B6B9-EE3685E6FE84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

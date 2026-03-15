@@ -1,0 +1,10 @@
+^F:\MARAT\GAMEDEV\DSMND37_CODEBASED_GAMEPROJECTS\LIGHTCYCLES\BUILD\CMAKEFILES\B9F6E4CE2FB3BF991E2ECFA833BBAB16\GENERATE.STAMP.RULE
+setlocal
+"F:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles -BF:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles/build/LightCycles.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
