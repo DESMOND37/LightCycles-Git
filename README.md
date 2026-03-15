@@ -46,11 +46,10 @@ cd <папка с исходниками> # Предполагается, что
 
 cmake -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_MANIFEST_MODE=OFF
 ```
-P.S. В случае возникновения ошибок удалить папку build в корневой дериктории проекта, и сгенерировать проект CMake заново:
-
-```cmd
-rmdir /S /Q build
-```
+> P.S. В случае возникновения ошибок удалить папку build в корневой дериктории проекта, и сгенерировать проект CMake заново:
+> ```cmd
+>rmdir /S /Q build
+>```
 
 ### 4. Собрать
 
