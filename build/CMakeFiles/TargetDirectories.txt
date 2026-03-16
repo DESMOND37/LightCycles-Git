@@ -1,3 +1,0 @@
-F:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles-Git/build/CMakeFiles/LightCycles.dir
-F:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles-Git/build/CMakeFiles/ALL_BUILD.dir
-F:/Marat/GameDev/DSMND37_CodeBased_GameProjects/LightCycles-Git/build/CMakeFiles/ZERO_CHECK.dir
