@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     strategy:
-      fail-fast: false   # если одна платформа упала — остальные продолжают
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
 
@@ -21,25 +21,43 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ── Linux: установить ncurses ───────────────────────────────────────────
-      - name: Install ncurses (Linux)
+      # ── Очистка старого кэша CMake (на случай если папка попала в репо) ────
+      - name: Clean build dir (Linux / macOS)
+        if: runner.os != 'Windows'
+        run: rm -rf build
+
+      - name: Clean build dir (Windows)
+        if: runner.os == 'Windows'
+        run: if (Test-Path build) { Remove-Item -Recurse -Force build }
+        shell: pwsh
+
+      # ── Linux: установить ncursesw ──────────────────────────────────────────
+      - name: Install ncursesw (Linux)
         if: runner.os == 'Linux'
-        run: sudo apt-get install -y libncurses5-dev
+        run: sudo apt-get install -y libncursesw5-dev
 
       # ── macOS: установить ncurses ───────────────────────────────────────────
       - name: Install ncurses (macOS)
         if: runner.os == 'macOS'
         run: brew install ncurses
 
-      # ── Windows: установить PDCurses через встроенный vcpkg ────────────────
+      # ── Windows: установить PDCurses через vcpkg ────────────────────────────
       - name: Install PDCurses (Windows)
         if: runner.os == 'Windows'
         run: vcpkg install pdcurses:x64-windows
+        shell: pwsh
 
       # ── Генерация CMake-проекта ─────────────────────────────────────────────
-      - name: Configure (Linux / macOS)
-        if: runner.os != 'Windows'
+      - name: Configure (Linux)
+        if: runner.os == 'Linux'
         run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Configure (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release \
+            -DCURSES_INCLUDE_DIR=$(brew --prefix ncurses)/include \
+            -DCURSES_LIBRARY=$(brew --prefix ncurses)/lib/libncurses.a
 
       - name: Configure (Windows)
         if: runner.os == 'Windows'
@@ -48,12 +66,13 @@ jobs:
           -G "Visual Studio 17 2022" -A x64
           -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake"
           -DVCPKG_MANIFEST_MODE=OFF
+        shell: pwsh
 
       # ── Сборка ─────────────────────────────────────────────────────────────
       - name: Build
         run: cmake --build build --config Release
 
-      # ── Упаковка артефактов (скачать готовые бинарники из GitHub) ──────────
+      # ── Артефакты ──────────────────────────────────────────────────────────
       - name: Upload artifact (Linux)
         if: runner.os == 'Linux'
         uses: actions/upload-artifact@v4
