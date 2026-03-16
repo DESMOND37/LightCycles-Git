@@ -10,11 +10,12 @@ Repository Build Status - [![Build LightCycles](https://github.com/DESMOND37/Lig
 
 ## Зависимости
 
-| Платформа | Библиотека | Установка |
-|-----------|-----------|-----------|
-| Windows   | PDCurses  | vcpkg (см. ниже) |
-| Linux     | ncurses   | `sudo apt install libncurses5-dev` |
-| macOS     | ncurses   | `brew install ncurses` |
+| Платформа                    | Библиотека | Установка                               |
+|------------------------------|------------|-----------------------------------------|
+| Windows                      | PDCurses   | vcpkg (см. ниже)                        |
+| Linux (Debian/Ubuntu)        | ncursesw   | `sudo apt-get install libncursesw5-dev` |  
+| Linux (RedHat/Fedora/CentOS) | ncursesw   | `sudo yum install ncurses-devel`        |
+| macOS                        | ncurses    | `brew install ncurses`                  |
 
 ---
 
@@ -74,7 +75,7 @@ build\Release\LightCycles.exe
 
 ---
 
-## Linux
+## Linux (Debian/Ubuntu)
 
 ```bash
 sudo apt install libncurses5-dev cmake build-essential
