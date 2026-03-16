@@ -36,10 +36,7 @@ jobs:
         if: runner.os == 'Linux'
         run: sudo apt-get install -y libncursesw5-dev
 
-      # ── macOS: установить ncurses ───────────────────────────────────────────
-      - name: Install ncurses (macOS)
-        if: runner.os == 'macOS'
-        run: brew install ncurses
+      # ── macOS: системный ncurses уже есть, brew не нужен ───────────────────
 
       # ── Windows: установить PDCurses через vcpkg ────────────────────────────
       - name: Install PDCurses (Windows)
@@ -54,10 +51,7 @@ jobs:
 
       - name: Configure (macOS)
         if: runner.os == 'macOS'
-        run: |
-          cmake -B build -DCMAKE_BUILD_TYPE=Release \
-            -DCURSES_INCLUDE_DIR=$(brew --prefix ncurses)/include \
-            -DCURSES_LIBRARY=$(brew --prefix ncurses)/lib/libncurses.a
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
 
       - name: Configure (Windows)
         if: runner.os == 'Windows'
