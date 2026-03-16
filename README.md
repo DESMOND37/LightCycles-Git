@@ -39,7 +39,7 @@ C:\vcpkg\vcpkg integrate install
 ### 2. Установить PDCurses через vcpkg
 
 ```cmd
-C:\vcpkg\vcpkg install pdcurses:x64-windows
+C:\vcpkg\vcpkg install pdcurses:x64-windows-static
 ```
 
 ### 3. Сгенерировать проект CMake
