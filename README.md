@@ -10,12 +10,12 @@ Repository Build Status - [![Build LightCycles](https://github.com/DESMOND37/Lig
 
 ## Зависимости
 
-| Платформа                    | Библиотека | Установка                               |
-|------------------------------|------------|-----------------------------------------|
-| Windows                      | PDCurses   | vcpkg (см. ниже)                        |
-| Linux (Debian/Ubuntu)        | ncursesw   | `sudo apt-get install libncursesw5-dev` |  
-| Linux (RedHat/Fedora/CentOS) | ncursesw   | `sudo yum install ncurses-devel`        |
-| macOS                        | ncurses    | `brew install ncurses`                  |
+| Платформа                    | Библиотека | Установка                                         |
+|------------------------------|------------|---------------------------------------------------|
+| Windows                      | PDCurses   | vcpkg (см. ниже)                                  |
+| Linux (Debian/Ubuntu)        | ncursesw   | `sudo apt-get install libncursesw5-dev`           |
+| Linux (RedHat/Fedora/CentOS) | ncursesw   | `sudo yum install ncurses-devel`                  |
+| macOS                        | ncurses    | системный (встроен, ничего не нужно устанавливать)|
 
 ---
 
@@ -38,6 +38,8 @@ C:\vcpkg\vcpkg integrate install
 
 ### 2. Установить PDCurses через vcpkg
 
+Статическая сборка — `LightCycles.exe` будет полностью автономным, без `.dll` зависимостей:
+
 ```cmd
 C:\vcpkg\vcpkg install pdcurses:x64-windows-static
 ```
@@ -45,14 +47,18 @@ C:\vcpkg\vcpkg install pdcurses:x64-windows-static
 ### 3. Сгенерировать проект CMake
 
 ```cmd
-cd <папка с исходниками> # Предполагается, что вы там уже будете.
+cd <папка с исходниками>
 
-cmake -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_MANIFEST_MODE=OFF
+cmake -B build -G "Visual Studio 17 2022" -A x64 ^
+  -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake ^
+  -DVCPKG_TARGET_TRIPLET=x64-windows-static ^
+  -DVCPKG_MANIFEST_MODE=OFF
 ```
-> P.S. В случае возникновения ошибок удалить папку build в корневой дериктории проекта, и сгенерировать проект CMake заново:
+
+> P.S. В случае возникновения ошибок — удалить папку `build` и сгенерировать заново:
 > ```cmd
->rmdir /S /Q build
->```
+> rmdir /S /Q build
+> ```
 
 ### 4. Собрать
 
@@ -64,7 +70,7 @@ cmake --build build --config Release
 
 ### 5. Запустить
 
-Запускать **только в Windows Terminal** или cmd с поддержкой VT:
+Запускать **только в Windows Terminal** или `cmd` с поддержкой VT:
 
 ```cmd
 build\Release\LightCycles.exe
@@ -78,7 +84,7 @@ build\Release\LightCycles.exe
 ## Linux (Debian/Ubuntu)
 
 ```bash
-sudo apt install libncurses5-dev cmake build-essential
+sudo apt install libncursesw5-dev cmake build-essential
 
 cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
@@ -86,47 +92,100 @@ cmake --build build
 ./build/LightCycles
 ```
 
+```markdown
+## Linux (RedHat / Fedora / CentOS)
+
+```bash
+# Fedora
+sudo dnf install ncurses-devel cmake gcc-c++
+
+# CentOS / RHEL (через yum)
+sudo yum install ncurses-devel cmake gcc-c++
+
+cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+
+./build/LightCycles
+```
+```
+
+> **Заметка:** на CentOS/RHEL 7 и старше пакет называется `ncurses-devel`, но он может не включать wide char поддержку. Если сборка падает с ошибкой про `wget_wch` — установи дополнительно `ncurses-devel` из EPEL или собери ncursesw вручную.
+
 ---
 
 ## macOS
 
+На macOS системный ncurses уже включает поддержку wide char — дополнительно ничего устанавливать не нужно:
+
 ```bash
-brew install ncurses cmake
-
-cmake -B build -DCMAKE_BUILD_TYPE=Release \
-  -DCURSES_INCLUDE_DIR=$(brew --prefix ncurses)/include \
-  -DCURSES_LIBRARY=$(brew --prefix ncurses)/lib/libncurses.a
-
+cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
+
 ./build/LightCycles
 ```
+
+> После скачивания собранного бинарника может потребоваться снять карантин:
+> ```bash
+> xattr -d com.apple.quarantine ./LightCycles
+> ```
 
 ---
 
 ## Управление
 
-| Игрок 1         | Игрок 2         | Действие                                        |
-|-----------------|-----------------|-------------------------------------------------|
-| W               | ↑               | Вверх                                           |
-| S               | ↓               | Вниз                                            |
-| A               | ←               | Влево                                           |
-| D               | →               | Вправо                                          |
-| ESC / Backspace | ESC / Backspace | Назад (только в меню)                           |
-| P / ESC         | P / ESC         | Пауза                                           |
-| Backspace       | Backspace       | Выход в главное меню (только если активна пауза)|
-| Q               | Q               | Выход                                           | 
+### Движение
 
-Разворот на 180° невозможен.  
-Первый, кто наберёт **5 побед**, выигрывает матч.  
-После матча — реванш (R) или выход (Q).
+| Действие | Игрок 1 (WASD) | Игрок 2 (стрелки) |
+|----------|----------------|-------------------|
+| Вверх    | W              | ↑                 |
+| Вниз     | S              | ↓                 |
+| Влево    | A              | ←                 |
+| Вправо   | D              | →                 |
+| Буст     | Tab            | Enter             |
+
+> Управление работает на любой раскладке клавиатуры (EN/RU).  
+> Разворот на 180° невозможен.
+
+### Системные клавиши
+
+| Клавиша          | Действие                                            |
+|------------------|-----------------------------------------------------|
+| P / ESC          | Пауза / снять паузу                                 |
+| Backspace        | Выход на стартовый экран (только если активна пауза)|
+| ESC / Backspace  | Назад (в меню)                                      |
+| Q                | Выход из игры                                       |
+
+### Экран конца матча
+
+| Клавиша       | Действие             |
+|---------------|----------------------|
+| R             | Реванш               |
+| Space / Enter | На стартовый экран   |
+| Q             | Выход                |
+
+---
+
+## Игровые режимы
+
+- **Player vs Player** — два игрока на одной клавиатуре
+- **Player vs CPU** — один игрок против ИИ на основе алгоритма Flood Fill
+
+Первый, кто наберёт **5 побед**, выигрывает матч.
 
 ---
 
 ## Структура проекта
 
 ```
-tron_cross/
-├── LightCycles/LightCycles.cpp          # Весь игровой код
-├── CMakeLists.txt                       # Кросс-платформенная сборка
-└── README.md                            # Эта инструкция
+LightCycles-Git/
+├── .github/workflows/
+│   └── build.yml                    # CI/CD сборка под Windows, Linux, macOS
+├── LightCycles/
+│   └── LightCycles.cpp              # Весь игровой код
+├── CMakeLists.txt                   # Кросс-платформенная сборка
+└── README.md                        # Эта инструкция
 ```
+
+---
+
+## © Copyright. DSMND Software, 2026. All Rights Reserved.

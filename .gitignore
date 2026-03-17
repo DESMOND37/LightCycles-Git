@@ -37,3 +37,6 @@ build-linux/
 build-macos/
 *.user
 .vs/
+
+#OtherFolders
+Backup/

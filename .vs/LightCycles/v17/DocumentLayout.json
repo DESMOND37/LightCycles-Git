@@ -33,6 +33,10 @@
           "SelectedChildIndex": 6,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LightCycles (3).cpp",
@@ -40,8 +44,7 @@
               "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles (3).cpp",
               "ViewState": "AgIAAB4DAAAAAAAAAAAgwEcDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-16T01:46:39.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T01:46:39.943Z"
             },
             {
               "$type": "Document",
@@ -51,8 +54,7 @@
               "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles (2).cpp",
               "ViewState": "AgIAAB4DAAAAAAAAAAAgwEcDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-16T01:37:35.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T01:37:35.319Z"
             },
             {
               "$type": "Document",
@@ -62,8 +64,7 @@
               "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles (1).cpp",
               "ViewState": "AgIAAJQAAAAAAAAAAAApwKkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-16T01:31:49.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T01:31:49.369Z"
             },
             {
               "$type": "Document",
@@ -73,12 +74,7 @@
               "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles.cpp",
               "ViewState": "AgIAAB8DAAAAAAAAAAAAAD0DAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-16T00:41:42.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2026-03-16T00:41:42.35Z"
             },
             {
               "$type": "Document",
@@ -99,7 +95,7 @@
               "RelativeDocumentMoniker": "LightCycles\\LightCycles.cpp",
               "ToolTip": "F:\\Marat\\GameDev\\DSMND37_CodeBased_GameProjects\\LightCycles-Git\\LightCycles\\LightCycles.cpp",
               "RelativeToolTip": "LightCycles\\LightCycles.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-15T18:16:32.09Z",
               "EditorCaption": ""
@@ -117,10 +113,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",

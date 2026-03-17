@@ -7,6 +7,15 @@
       "RelativeMoniker": "D:0:0:{F986CD0B-BF55-422B-8701-A0B73DF0D0E9}|LightCycles\\LightCycles.vcxproj|solutionrelative:LightCycles\\LightCycles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DSMND\\Downloads\\LightCycles (3).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DSMND\\Downloads\\LightCycles (1).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DSMND\\Downloads\\LightCycles (2).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DSMND\\Downloads\\LightCycles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -21,15 +30,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 97,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "LightCycles (3).cpp",
+              "DocumentMoniker": "C:\\Users\\DSMND\\Downloads\\LightCycles (3).cpp",
+              "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles (3).cpp",
+              "ViewState": "AgIAAB4DAAAAAAAAAAAgwEcDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-16T01:46:39.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LightCycles (2).cpp",
+              "DocumentMoniker": "C:\\Users\\DSMND\\Downloads\\LightCycles (2).cpp",
+              "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles (2).cpp",
+              "ViewState": "AgIAAB4DAAAAAAAAAAAgwEcDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-16T01:37:35.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LightCycles (1).cpp",
+              "DocumentMoniker": "C:\\Users\\DSMND\\Downloads\\LightCycles (1).cpp",
+              "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles (1).cpp",
+              "ViewState": "AgIAAJQAAAAAAAAAAAApwKkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-16T01:31:49.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LightCycles.cpp",
               "DocumentMoniker": "C:\\Users\\DSMND\\Downloads\\LightCycles.cpp",
               "ToolTip": "C:\\Users\\DSMND\\Downloads\\LightCycles.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0DAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8DAAAAAAAAAAAAAD0DAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-16T00:41:42.35Z",
               "EditorCaption": ""
@@ -40,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "tron.cpp",
               "DocumentMoniker": "F:\\Marat\\GameDev\\DSMND37_CodeBased_GameProjects\\LightCycles-Git\\LightCycles\\files\\tron.cpp",
               "RelativeDocumentMoniker": "LightCycles\\files\\tron.cpp",
@@ -57,7 +99,7 @@
               "RelativeDocumentMoniker": "LightCycles\\LightCycles.cpp",
               "ToolTip": "F:\\Marat\\GameDev\\DSMND37_CodeBased_GameProjects\\LightCycles-Git\\LightCycles\\LightCycles.cpp",
               "RelativeToolTip": "LightCycles\\LightCycles.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-15T18:16:32.09Z",
               "EditorCaption": ""
