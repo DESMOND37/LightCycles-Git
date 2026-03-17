@@ -4,7 +4,7 @@ The official repository of DSMND Software. A simple game inspired by "Tron" '82 
 # TRON: Light Cycles
 Cross-platform terminal game — Windows (VS 2022) · Linux · macOS
 
-Repository Build Status - [![Build LightCycles](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml)
+Repository Build Status - [![Build LightCycles](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml/badge.svg)](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml)
 
 ---
 
@@ -92,7 +92,6 @@ cmake --build build
 ./build/LightCycles
 ```
 
-```markdown
 ## Linux (RedHat / Fedora / CentOS)
 
 ```bash
@@ -107,11 +106,8 @@ cmake --build build
 
 ./build/LightCycles
 ```
-```
 
-> **Заметка:** на CentOS/RHEL 7 и старше пакет называется `ncurses-devel`, но он может не включать wide char поддержку. Если сборка падает с ошибкой про `wget_wch` — установи дополнительно `ncurses-devel` из EPEL или собери ncursesw вручную.
-
----
+> **Заметка:** на CentOS/RHEL 7 и старше пакет называется `ncurses-devel`, но он может не включать wide char поддержку. Если сборка падает с ошибкой про `wget_wch` — установите дополнительно `ncurses-devel` из EPEL или собери ncursesw вручную.
 
 ## macOS
 
@@ -124,7 +120,7 @@ cmake --build build
 ./build/LightCycles
 ```
 
-> После скачивания собранного бинарника может потребоваться снять карантин:
+> После скачивания собранного бинарника может потребоваться снять карантин, т.к. исполняемый файл игры ещё не имеет цифровой подписи:
 > ```bash
 > xattr -d com.apple.quarantine ./LightCycles
 > ```
