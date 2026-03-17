@@ -4,6 +4,8 @@ The official repository of DSMND Software. A simple game inspired by "Tron" '82 
 # TRON: Light Cycles
 Cross-platform terminal game — Windows (VS 2022) · Linux · macOS
 
+The code base was written using the power of Claude Sonnet 4.6 AI
+
 Repository Build Status - [![Build LightCycles](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml/badge.svg)](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml)
 
 ---
