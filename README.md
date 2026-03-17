@@ -107,7 +107,7 @@ cmake --build build
 ./build/LightCycles
 ```
 
-> **Заметка:** на CentOS/RHEL 7 и старше пакет называется `ncurses-devel`, но он может не включать wide char поддержку. Если сборка падает с ошибкой про `wget_wch` — установите дополнительно `ncurses-devel` из EPEL или собери ncursesw вручную.
+> **Заметка:** на CentOS/RHEL 7 и старше пакет называется `ncurses-devel`, но он может не включать wide char поддержку. Если сборка падает с ошибкой про `wget_wch` — установите дополнительно `ncurses-devel` из EPEL или соберите ncursesw вручную.
 
 ## macOS
 
