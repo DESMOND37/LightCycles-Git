@@ -179,6 +179,7 @@ LightCycles-Git/
 ├── LightCycles/
 │   └── LightCycles.cpp              # Весь игровой код
 ├── CMakeLists.txt                   # Кросс-платформенная сборка
+├── LICENSE                          # Файл текущей лицензии проекта - AGPL-3.0 license
 └── README.md                        # Эта инструкция
 ```
 
