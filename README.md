@@ -1,12 +1,15 @@
 # LightCycles-Git
-The official repository of DSMND Software. A simple game inspired by "Tron" '82 - "Light Cycles" In-Movie Arcade Game.
+The official repository of DSMND Software. A simple game inspired by "Tron" '82 "Light Cycles" - In-Movie Arcade Game.
 
 # TRON: Light Cycles
 Cross-platform terminal game — Windows (VS 2022) · Linux · macOS
 
 The code base was written using the power of Claude Sonnet 4.6 AI
 
-Repository Build Status - [![Build LightCycles](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml/badge.svg)](https://github.com/DESMOND37/LightCycles-Git/actions/workflows/build.yml)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
+[![GitHub License](https://img.shields.io/github/license/DESMOND37/LightCycles-Git?style=for-the-badge)](http://www.gnu.org/licenses/agpl-3.0)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/DESMOND37/LightCycles-Git/build.yml?style=for-the-badge&logo=github&label=Repository%20Build%20Status)
 
 ---
 
